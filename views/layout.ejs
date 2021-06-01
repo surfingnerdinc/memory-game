@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <link rel="stylesheet" href="css/layout.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navigation active">
+        <ul>
+          <li>
+            <a href="/">
+              <span class="icon"><i class="fab fa-apple"></i></span>
+              <span class="title">
+                <h2>Surfing Nerd .inc</h2>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/main">
+              <span class="icon"><i class="fa fa-home"></i></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/memory-game">
+              <span class="icon"><i class="fa fa-users"></i></span>
+              <span class="title">Memory game</span>
+            </a>
+          </li>
+          <li>
+            <a href="/flashcards">
+              <span class="icon"><i class="fa fa-comment"></i></span>
+              <span class="title">Fiszki</span>
+            </a>
+          </li>
+          <li>
+            <a href="/main">
+              <span class="icon"><i class="fab fa-facebook"></i></span>
+              <span class="title">Polub sociale</span>
+            </a>
+          </li>
+          <li>
+            <a href="/account">
+              <span class="icon"><i class="fas fa-cogs"></i></span>
+              <span class="title">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="/main">
+              <span class="icon"><i class="fas fa-question-circle"></i></span>
+              <span class="title">Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="/main">
+              <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+              <span class="title">Sing out!</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main active">
+        <div class="topbar">
+          <div class="toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search" />
+              <i class="fa fa-search" aria-hidden="true"></i
+            ></label>
+          </div>
+          <div class="user">
+            <a href="#"><img src="assets/default_user.jpeg" /></a>
+          </div>
+        </div>
+        <div class="wrapper"><%- body %></div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        let toggle = document.querySelector(".toggle");
+        let navigation = document.querySelector(".navigation");
+        let main = document.querySelector(".main");
+        toggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
